@@ -13,13 +13,6 @@ export interface User {
   crownColor?: string
 }
 
-// 📝 차트 데이터 타입 정의
-export interface ChartData {
-  month: string
-  사용자: number
-  주민평균: number
-}
-
 // ✅ 공주아파트 유저 데이터
 const gongjuUsers: User[] = [
   { rank: 1, name: "초록콩", grade: "🌟에코 히어로", apartment: "공주아파트", bgColor: "bg-yellow-100", crownColor: "text-yellow-400", monthlyPoints: 1500, totalPoints: 12000 },
@@ -54,15 +47,6 @@ const princeUsers: User[] = [
 // ✅ 모든 유저 데이터 통합 (종합랭킹용)
 export const allUsers = [...gongjuUsers, ...princeUsers]
 
-// ✅ 더미 차트 데이터 (API 연동 전 사용)
-export const chartData: ChartData[] = [
-  { month: "5달전", 사용자: 100, 주민평균: 250 },
-  { month: "4달전", 사용자: 400, 주민평균: 180 },
-  { month: "3달전", 사용자: 150, 주민평균: 300 },
-  { month: "2달전", 사용자: 500, 주민평균: 200 },
-  { month: "1달전", 사용자: 350, 주민평균: 450 },
-  { month: "이번달", 사용자: 200, 주민평균: 150 }
-]
 
 // ✅ 사용자 데이터 가져오기 함수 (추후 API 연동을 위한 구조)
 export const fetchUsers = async (): Promise<User[]> => {
@@ -71,16 +55,6 @@ export const fetchUsers = async (): Promise<User[]> => {
   } catch (error) {
     console.error("Error fetching users:", error)
     return allUsers
-  }
-}
-
-// ✅ 차트 데이터 가져오기 함수 (추후 API 연동을 위한 구조)
-export const fetchChartData = async (): Promise<ChartData[]> => {
-  try {
-    return chartData // 현재는 더미 데이터 반환
-  } catch (error) {
-    console.error("Error fetching chart data:", error)
-    return chartData
   }
 }
 
