@@ -132,7 +132,7 @@ const UserCard = ({
             <div className="absolute top-0 right-0 h-full border-l-4 border-black"></div>
           </div>
           <p className="text-gray-600 text-sm whitespace-nowrap">
-            이번달 RP🌱: {xp} / 10000
+            이번달 VP🌱: {xp} / 10000
           </p>
           <p className="text-gray-600 text-sm">{message}</p>
         </div>
@@ -270,7 +270,7 @@ export function Ranking() {
         {/* 상단 헤더 및 드롭다운 */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold flex items-center gap-2">
-            🏢 ㅇㅇ시 ㅇㅇ동 분리수거 랭킹
+            🏢 대림 1동 분리수거 랭킹
             <OverlayTrigger
               placement="top"
               overlay={
